@@ -8,9 +8,9 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # if no split is specified, a dict is returned
 dataset_base = load_dataset("cnn_dailymail", "3.0.0", split="train[:1%]")
 
-ds = dataset_base.with_format("torch", device=device)
+tensor = dataset_base.with_format("torch", device=device)
 
-print(ds[0])
+print(tensor[0])
 
 """
 training_data = dataset["train"]
