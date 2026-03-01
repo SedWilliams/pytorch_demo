@@ -18,28 +18,35 @@ nltk.download("punkt")
 
 ### parse sentences -> tokenize
 sentences = nltk.sent_tokenize(dataset_base[0]["article"])
-print("\r\n")
-print(f"Sentences: {sentences}")
-print("\r\n")
 
-token_bag = list()
+sentence_bag = list()
+word_bag = list()
 # iterate over each sentence...
 for sentence in sentences:
+    sentence_bag.append(sentence)
     # for each token in the sentence, add it to the token bag
     for word in sentence.split():
-        token_bag.append(word)
+        word_bag.append(word)
 
+def sentences():
+    return sentence_bag
+
+"""
 print("\r\n")
-print(f"Token bag: {token_bag}")
+print(f"Tokenized sentences: {sentence_bag}")
 print("\r\n")
 
+print(f"Tokenized words: {word_bag}")
+print("\r\n")
+
+def sentences():
+    return sentence_bag
 
 #make tensor
 #tensor = dataset_base.with_format("torch", device=device)
 
 #print(tensor[0])
 
-"""
 training_data = dataset["train"]
 testing_data = dataset["test"]
 
