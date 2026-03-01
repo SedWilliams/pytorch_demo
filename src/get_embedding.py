@@ -23,6 +23,7 @@ result_list = np.array(result.embeddings)
 
 first_result = np.array(result.embeddings[0].values) if result.embeddings else np.zeroes((1,1), dtype=float)
 
+
 print(f"Embeddings: {result}")
 print(f"Embedding shape:{first_result.shape}")
 
