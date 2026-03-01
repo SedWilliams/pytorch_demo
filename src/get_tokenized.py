@@ -31,6 +31,9 @@ for sentence in sentences:
 def sentences():
     return sentence_bag
 
+def words():
+    return word_bag
+
 """
 print("\r\n")
 print(f"Tokenized sentences: {sentence_bag}")
